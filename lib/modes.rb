@@ -1,6 +1,6 @@
 module Modes
 #=================properties===================
-  attr_accessor :mode
+  attr_accessor :mode, :mode_error!
 #==============================================
   def spectator
     self.mode = "valid"
