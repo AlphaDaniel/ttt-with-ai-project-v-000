@@ -3,7 +3,7 @@ class Dry_Helpers
   def win_combo_char
     cell[won?[0]]
   end
-  
+
   def cell
     board.cells
   end
