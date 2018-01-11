@@ -9,7 +9,7 @@ class Player
   def self.turn
     move = current_player.move(board)
     sleep(0.3)
-    board.valid_move?(move)? board.update(move, current_player) : current_player.class == Players::Computer ? turn : error!
+    board.valid_move?(move)? board.update(move, current_player) : current_player.class == Players::Computer ? self.turn : error!
     board.display
     puts "==========="
   end
@@ -17,7 +17,7 @@ class Player
   def self.error!
     puts "\n Invalid Move Try Again \n".colorize(color: :white, background: :red)
     sleep(0.2)
-    turn
+    self.turn
   end
 #==============================================
 end
