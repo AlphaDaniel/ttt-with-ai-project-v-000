@@ -22,5 +22,11 @@ module Modes
     sleep(2.5)
     Game.new.play
   end
+
+  def mode_error!
+    puts "\n Invalid Move Try Again \n".colorize(color: :white, background: :red)
+    sleep(0.2)
+    turn
+  end
 #==============================================
 end
