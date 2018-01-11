@@ -1,6 +1,6 @@
 module Modes
 #==============================================
-  def mode 
+  def mode
     self = nil
   end
 
