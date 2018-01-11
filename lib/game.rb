@@ -46,6 +46,12 @@ WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4
       case self.mode
       when "0"
         self.spectator
+      when "1"
+        self.vs_computer
+      when "2"
+        self.player_vs_player
+      else
+        self.mode_error!
       end
     end
   end
