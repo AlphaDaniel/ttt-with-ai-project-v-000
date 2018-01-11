@@ -65,7 +65,7 @@ WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4
     #   vs_computer_start
     #   Game.new(Players::Computer.new("O"), Players::Human.new("X")).play
     else
-      self.class.yes_no_error!
+      self.class.play_again_error!
     end
   end
 #=====================================================================================
