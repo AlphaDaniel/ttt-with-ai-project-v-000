@@ -14,8 +14,6 @@ module Modes
     puts "YOU vs COMPUTER... WOULD YOU LIKE TO GO FIRST?".cyan
     puts "Enter (y/n)".green
     ans = gets.strip
-    # ans == "y" ? Game.new(Players::Human.new("X"), Players::Computer.new("O")).play :
-    # Game.new(Players::Computer.new("O"), Players::Human.new("X")).play
     case ans
     when "y"
       vs_computer_start
