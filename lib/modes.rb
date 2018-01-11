@@ -26,7 +26,7 @@ module Modes
   def mode_error!
     puts "\n Invalid Move Try Again \n".colorize(color: :white, background: :red)
     sleep(0.2)
-    turn
+    Players.turn
   end
 #==============================================
 end
