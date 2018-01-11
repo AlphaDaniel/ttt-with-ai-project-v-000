@@ -50,7 +50,7 @@ module Modes
     self.vs_computer
   end
 
-  def play_first!
+  def yes_no_error!
     puts "\n Invalid Entry Please Enter y or n \n".colorize(color: :white, background: :red)
     sleep(0.3)
     play_again?
