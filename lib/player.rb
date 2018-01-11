@@ -5,7 +5,7 @@ class Player
   def initialize(char)
     @token = char
   end
-
+#===================class======================
   def self.turn
     move = current_player.move(board)
     sleep(0.3)
