@@ -1,4 +1,3 @@
-# Initialize Players::Computer.new("X" or "O")
 module Players
 #======================AI======================
   class Computer < Player
