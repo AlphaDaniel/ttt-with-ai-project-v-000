@@ -4,7 +4,7 @@ module Modes
   # def mode
   #   @mode
   # end
-  # 
+  #
   # def mode=(mode)
   #   @mode = mode
   # end
