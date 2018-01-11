@@ -1,7 +1,7 @@
 class Game < Dry_Helpers
 #=====================================properties======================================
   include Players
-  # include Modes
+  include Modes
   attr_accessor :player_1, :player_2, :board
 #=====================================intialize=======================================
   def initialize(p1 = Players::Human.new("X"), p2 = Players::Human.new("O"), board = Board.new)
