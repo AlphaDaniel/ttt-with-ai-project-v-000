@@ -1,2 +1,3 @@
 - added changelog
-- cleaned code a bit
+- cleaned code and organized 
+- add Dry_Helpers class to help with some repeating code
