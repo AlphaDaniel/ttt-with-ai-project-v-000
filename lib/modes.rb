@@ -1,11 +1,11 @@
 module Modes
 #==============================================
   def mode
-    mode
+    @mode
   end
 
   def mode=(mode)
-    mode = mode
+    @mode = mode
   end
 
   def Spectator
