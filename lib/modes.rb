@@ -21,8 +21,7 @@ module Modes
       vs_computer_start
       Game.new(Players::Human.new("X"), Players::Computer.new("O")).play
     when "n"
-      puts "GAME STARTING... GOOD LUCK!".cyan
-      sleep(2)
+      vs_computer_start
       Game.new(Players::Computer.new("O"), Players::Human.new("X")).play
     else
       first_error!
