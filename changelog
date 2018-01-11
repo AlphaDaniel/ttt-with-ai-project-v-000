@@ -5,6 +5,12 @@ Version 1.2.0
 - added Modes class to store game modes
 - added play first? option
 
+Version 1.0.0
+- Added Game Modes 0/1/2
+- Added CLI Control Flow
+- Added Some Color Eye Candy To CLI Output 
+- Added Some Sleep Methods For A More Realistic Interaction With AI
+
 
 Initial
 - Passed all tests
