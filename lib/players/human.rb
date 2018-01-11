@@ -1,3 +1,4 @@
+# Initialize Players::Human.new("X" or "O")
 module Players
 #====================human=====================
   class Human < Player
