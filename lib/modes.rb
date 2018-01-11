@@ -1,11 +1,11 @@
 module Modes
 #==============================================
   def mode
-    self.mode
+    mode
   end
 
   def mode=(mode)
-    self.mode = mode
+    mode = mode
   end
 
   def Spectator
