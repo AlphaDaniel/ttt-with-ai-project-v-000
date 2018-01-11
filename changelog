@@ -4,3 +4,7 @@ Version 1.2.0
 - added Dry_Helpers class to help with some repeating code
 - added Modes class to store game modes
 - added play first? option
+
+
+Initial
+- Passed all tests
