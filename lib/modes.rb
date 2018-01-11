@@ -24,8 +24,9 @@ module Modes
   end
 
   def mode_error!
-    puts "\n Invalid Move Try Again \n".colorize(color: :white, background: :red)
-    sleep(0.2)
+    puts "\n Invalid Entry Please Enter 0, 1, or 2 \n".colorize(color: :white, background: :red)
+    sleep(0.3)
+    self.start
   end
 #==============================================
 end
