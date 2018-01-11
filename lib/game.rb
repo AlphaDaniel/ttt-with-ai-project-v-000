@@ -50,11 +50,6 @@ WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4
     sleep(0.2)
     turn
   end
-
-  def play
-    while !over? && !draw?; turn end
-    if won? then puts "Congratulations #{winner}!".green elsif draw? then puts "It's Draw!!".yellow end
-  end
 #========================================CLI==========================================
   def self.start
     puts "Welcome To Tic Tac Toe!".cyan
@@ -91,7 +86,9 @@ WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4
     end
   end
 
-
-
+  def play
+    while !over? && !draw?; turn end
+    if won? then puts "Congratulations #{winner}!".green elsif draw? then puts "It's Draw!!".yellow end
+  end
 #=====================================================================================
 end
