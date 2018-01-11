@@ -11,7 +11,10 @@ module Modes
 
   def vs_computer
     self.mode = "valid"
-    puts "YOU vs COMPUTER... GOOD LUCK!".cyan
+    # puts "YOU vs COMPUTER... GOOD LUCK!".cyan
+    puts "YOU vs COMPUTER... WOULD YOU LIKE TO GO FIRST?".cyan
+    puts "Enter (y/n)".green
+    ans = gets.strip
     sleep(2)
     Game.new(Players::Human.new("X"), Players::Computer.new("O")).play
   end
