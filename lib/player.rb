@@ -9,7 +9,9 @@ class Player
   def self.turn
     move = Game.current_player.move(board)
     sleep(0.3)
-    Game.board.valid_move?(move)? Game.board.update(move, current_player) : Game.current_player.class == Players::Computer ? self.turn : error!
+    Game.board.valid_move?(move)? Game.board.update(move, current_player) : Game.current_player.class == Players::Computer ? self.turn : self
+      sleep(0.2)
+.error!
     Game.board.display
     puts "==========="
   end
