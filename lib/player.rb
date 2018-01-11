@@ -7,7 +7,7 @@ class Player
   end
 
   def self.turn
-    move = current_player.move(board)
+    move = Game.current_player.move(board)
     sleep(0.3)
     board.valid_move?(move)? board.update(move, current_player) : current_player.class == Players::Computer ? turn : error!
     board.display
