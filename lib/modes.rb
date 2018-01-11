@@ -23,6 +23,13 @@ module Modes
       Game.new(Players::Human.new("X"), Players::Computer.new("O")).play
     when "n"
       Game.new(Players::Computer.new("O"), Players::Human.new("X")).play
+    else
+    end
+
+    def first_error!
+      puts "\n Invalid Entry Please Enter y or n \n".colorize(color: :white, background: :red)
+      sleep(0.3)
+      self.vs_computer
     end
 
 
