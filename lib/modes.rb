@@ -12,20 +12,19 @@ module Modes
   def vs_computer
     self.mode = "valid"
     # puts "YOU vs COMPUTER... GOOD LUCK!".cyan
-    
+
     puts "YOU vs COMPUTER... WOULD YOU LIKE TO GO FIRST?".cyan
     puts "Enter (y/n)".green
     ans = gets.strip
     if ans != "y" || ans != "n"
       first_error!
       self.vs_computer
+    else
+      puts "GAME STARTING... GOOD LUCK!".cyan
+      sleep(2)
+      ans == "y" ? Game.new(Players::Human.new("X"), Players::Computer.new("O")).play :
+      Game.new(Players::Computer.new("O"), Players::Human.new("X")).play
     end
-    
-    puts "GAME STARTING... GOOD LUCK!".cyan
-    sleep(2)    
-    ans == "y" ? Game.new(Players::Human.new("X"), Players::Computer.new("O")).play :
-    Game.new(Players::Computer.new("O"), Players::Human.new("X")).play   
-    
   end
 
   def first_error!
@@ -44,6 +43,6 @@ module Modes
     puts "\n Invalid Entry Please Enter 0, 1, or 2 \n".colorize(color: :white, background: :red)
     sleep(0.3)
     self.start
-  end  
+  end
 #==============================================
 end
