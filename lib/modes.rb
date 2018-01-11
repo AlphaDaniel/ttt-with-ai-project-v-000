@@ -1,7 +1,7 @@
 module Modes
 #==============================================
   def mode
-    self = nil
+    nil
   end
 
   def Spectator
