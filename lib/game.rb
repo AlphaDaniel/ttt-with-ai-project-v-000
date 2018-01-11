@@ -32,18 +32,18 @@ WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4
   end
 
   def self.choose
-    mode = gets.strip
-    until mode == "valid"
-      if mode == "0"
-        mode = "valid"
+    self.mode = gets.strip
+    until self.mode == "valid"
+      if self.mode == "0"
+        self.mode = "valid"
         self.Spectator
-      elsif mode == "1"
-        mode = "valid"
+      elsif self.mode == "1"
+        self.mode = "valid"
         puts "YOU vs COMPUTER... GOOD LUCK!".cyan
         sleep(2)
         Game.new(Players::Human.new("X"), Players::Computer.new("O")).play
-      elsif mode == "2"
-        mode = "valid"
+      elsif self.mode == "2"
+        self.mode = "valid"
         puts "PLAYER vs PLAYER... MAY THE BEST MAN WIN!".cyan
         sleep(2.5)
         Game.new.play
@@ -61,3 +61,4 @@ WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4
   end
 #=====================================================================================
 end
+self.
