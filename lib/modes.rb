@@ -5,7 +5,7 @@ module Modes
   end
 
   def mode=(mode)
-    mode
+    self.mode
   end
 
   def Spectator
