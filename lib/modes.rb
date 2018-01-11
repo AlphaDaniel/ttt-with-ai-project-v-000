@@ -1,12 +1,13 @@
 module Modes
 #==============================================
-  def mode
-    @mode
-  end
-
-  def mode=(mode)
-    @mode = mode
-  end
+  attr_accessor :mode
+  # def mode
+  #   @mode
+  # end
+  # 
+  # def mode=(mode)
+  #   @mode = mode
+  # end
 
   def Spectator
     puts "COMPUTER vs COMPUTER... GAME STARTING IN 3..2..1!".cyan
