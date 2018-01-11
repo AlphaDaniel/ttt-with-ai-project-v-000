@@ -19,7 +19,7 @@ module Modes
     if ans != "y" || ans != "n"
       first_error!
       self.vs_computer
-    else
+    elsif
       puts "GAME STARTING... GOOD LUCK!".cyan
       sleep(2)
       ans == "y" ? Game.new(Players::Human.new("X"), Players::Computer.new("O")).play :
