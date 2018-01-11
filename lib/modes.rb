@@ -22,7 +22,7 @@ module Modes
       vs_computer_start
       Game.new(Players::Computer.new("O"), Players::Human.new("X")).play
     else
-      yes_no_error!
+      play_first!
     end
   end
 
@@ -44,10 +44,16 @@ module Modes
     self.start
   end
 
-  def yes_no_error!
+  def play_first!
     puts "\n Invalid Entry Please Enter y or n \n".colorize(color: :white, background: :red)
     sleep(0.3)
     self.vs_computer
+  end
+
+  def play_first!
+    puts "\n Invalid Entry Please Enter y or n \n".colorize(color: :white, background: :red)
+    sleep(0.3)
+    play_again?
   end
 #==============================================
 end
