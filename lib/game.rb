@@ -35,10 +35,11 @@ WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4
     mode = gets.strip
     until mode == "valid"
       if mode == "0"
-        mode = "valid"
-        puts "COMPUTER vs COMPUTER... GAME STARTING IN 3..2..1!".cyan
-        sleep(2)
-        Game.new(Players::Computer.new("X"), Players::Computer.new("O")).play
+        Spectator
+        # mode = "valid"
+        # puts "COMPUTER vs COMPUTER... GAME STARTING IN 3..2..1!".cyan
+        # sleep(2)
+        # Game.new(Players::Computer.new("X"), Players::Computer.new("O")).play
       elsif mode == "1"
         mode = "valid"
         puts "YOU vs COMPUTER... GOOD LUCK!".cyan
