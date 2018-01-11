@@ -28,21 +28,12 @@ WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4
     puts "Spectator:"+" 0".green
     puts "You vs Computer:"+" 1".green
     puts "Player vs Player:"+" 2".green
-    choose
+    choose_mode
   end
 
-  def self.choose
+  def self.choose_mode
     self.mode = gets.strip
     until self.mode == "valid"
-      # if self.mode == "0"
-      #   self.spectator
-      # elsif self.mode == "1"
-      #   self.vs_computer
-      # elsif self.mode == "2"
-      #   self.player_vs_player
-      # else
-      #   self.mode_error!
-      # end
       case self.mode
       when "0"
         self.spectator
