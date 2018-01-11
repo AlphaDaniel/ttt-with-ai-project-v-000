@@ -52,7 +52,7 @@ module Modes
 
   def play_again_error!
     puts "\n Invalid Entry Please Enter y or n \n".colorize(color: :white, background: :red)
-    sleep(0.3)    
+    sleep(0.3)
   end
 #==============================================
 end
