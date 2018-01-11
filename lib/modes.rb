@@ -16,7 +16,10 @@ module Modes
     puts "YOU vs COMPUTER... WOULD YOU LIKE TO GO FIRST?".cyan
     puts "Enter (y/n)".green
     ans = gets.strip
-    first_error! if ans != "y" || ans != "n"
+    if ans != "y" || ans != "n"
+      first_error!
+      self.vs_computer
+    end
     
     puts "GAME STARTING... GOOD LUCK!".cyan
     sleep(2)    
@@ -28,7 +31,6 @@ module Modes
   def first_error!
     puts "\n Invalid Entry Please Enter y or n \n".colorize(color: :white, background: :red)
     sleep(0.3)
-    self.start
   end
 #==============================================
   def player_vs_player
