@@ -17,9 +17,8 @@ module Modes
     # ans == "y" ? Game.new(Players::Human.new("X"), Players::Computer.new("O")).play :
     # Game.new(Players::Computer.new("O"), Players::Human.new("X")).play
     case ans
-    when "y"      
-      puts "GAME STARTING... GOOD LUCK!".cyan
-      sleep(2)
+    when "y"
+      
       Game.new(Players::Human.new("X"), Players::Computer.new("O")).play
     when "n"
       puts "GAME STARTING... GOOD LUCK!".cyan
@@ -30,11 +29,16 @@ module Modes
     end
   end
 
+  def vs_computer_start
+    puts "GAME STARTING... GOOD LUCK!".cyan
+    sleep(2)
+  end
+
   def first_error!
     puts "\n Invalid Entry Please Enter y or n \n".colorize(color: :white, background: :red)
     sleep(0.3)
     self.vs_computer
-  end
+  end  
 #==============================================
   def player_vs_player
     self.mode = "valid"
