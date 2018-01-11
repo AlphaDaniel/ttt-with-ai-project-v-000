@@ -19,10 +19,11 @@ module Modes
     if ans != "y" || ans != "n"
       first_error!
       self.vs_computer
-    elsif ans == "y" ? Game.new(Players::Human.new("X"), Players::Computer.new("O")).play :
-    Game.new(Players::Computer.new("O"), Players::Human.new("X")).play
-    puts "GAME STARTING... GOOD LUCK!".cyan
-    sleep(2)
+    else
+      puts "GAME STARTING... GOOD LUCK!".cyan
+      sleep(2)
+      ans == "y" ? Game.new(Players::Human.new("X"), Players::Computer.new("O")).play :
+      Game.new(Players::Computer.new("O"), Players::Human.new("X")).play
     end
   end
 
@@ -36,12 +37,6 @@ module Modes
     puts "PLAYER vs PLAYER... MAY THE BEST MAN WIN!".cyan
     sleep(2.5)
     Game.new.play
-  end
-#==============================================
-  def mode_error!
-    puts "\n Invalid Entry Please Enter 0, 1, or 2 \n".colorize(color: :white, background: :red)
-    sleep(0.3)
-    self.start
   end
 #==============================================
 end
