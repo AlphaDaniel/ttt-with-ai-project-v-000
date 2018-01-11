@@ -1,6 +1,7 @@
 module Modes
-#==============================================
+#=================properties===================
   attr_accessor :mode
+#==============================================
   def Spectator
     puts "COMPUTER vs COMPUTER... GAME STARTING IN 3..2..1!".cyan
     sleep(2)
