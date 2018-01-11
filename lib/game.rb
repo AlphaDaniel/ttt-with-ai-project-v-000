@@ -51,6 +51,23 @@ WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4
     while !over? && !draw?; turn end
     if won? then puts "Congratulations #{winner}!".green
     elsif draw? then puts "It's A Draw!!".yellow end
+    play_again?
+  end
+
+  def play_again?
+    puts "WOULD YOU LIKE TO PLAY AGAIN?".cyan
+    puts "Enter (y/n)".green
+    ans = gets.strip
+    case ans
+    when "y"
+      vs_computer_start
+      Game.new(Players::Human.new("X"), Players::Computer.new("O")).play
+    when "n"
+      vs_computer_start
+      Game.new(Players::Computer.new("O"), Players::Human.new("X")).play
+    else
+      first_error!
+    end
   end
 #=====================================================================================
 end
