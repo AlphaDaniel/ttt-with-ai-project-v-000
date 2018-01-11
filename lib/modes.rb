@@ -11,18 +11,21 @@ module Modes
 
   def vs_computer
     self.mode = "valid"
-    # puts "YOU vs COMPUTER... GOOD LUCK!".cyan
-    
     puts "YOU vs COMPUTER... WOULD YOU LIKE TO GO FIRST?".cyan
     puts "Enter (y/n)".green
     ans = gets.strip
     puts "GAME STARTING... GOOD LUCK!".cyan
     sleep(2)
-    
-    ans == "y" ? Game.new(Players::Human.new("X"), Players::Computer.new("O")).play :
-    Game.new(Players::Computer.new("O"), Players::Human.new("X")).play
-    
-    
+    # ans == "y" ? Game.new(Players::Human.new("X"), Players::Computer.new("O")).play :
+    # Game.new(Players::Computer.new("O"), Players::Human.new("X")).play
+    case ans
+    when "y"
+      Game.new(Players::Human.new("X"), Players::Computer.new("O")).play
+    when "n"
+      Game.new(Players::Computer.new("O"), Players::Human.new("X")).play
+    end
+
+
   end
 
   def player_vs_player
