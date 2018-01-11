@@ -1,4 +1,4 @@
-class Game < Dry_Helpers, Player
+class Game < Dry_Helpers
 #=====================================properties======================================
   attr_accessor :player_1, :player_2, :board
 #=====================================intialize=======================================
