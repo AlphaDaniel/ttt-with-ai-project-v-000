@@ -1,5 +1,6 @@
-Version 1.0.1
+Version 1.2.0
 - added changelog
 - cleaned code and organized
 - added Dry_Helpers class to help with some repeating code
 - added Modes class to store game modes
+- added play first? option
