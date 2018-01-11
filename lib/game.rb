@@ -32,16 +32,16 @@ WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4
   end
 
   def self.choose
-    self.mode = gets.strip
-    until self.mode == "valid"
-      if self.mode == "0"
-        self.spectator
-      elsif self.mode == "1"
-        self.vs_computer
+    mode = gets.strip
+    until mode == "valid"
+      if mode == "0"
+        spectator
+      elsif mode == "1"
+        vs_computer
       elsif self.mode == "2"
-        self.player_vs_player
+        player_vs_player
       else
-        self.mode_error!
+        mode_error!
       end
     end
   end
@@ -51,4 +51,3 @@ WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4
     if won? then puts "Congratulations #{winner}!".green elsif draw? then puts "It's A Draw!!".yellow end
   end
 #=====================================================================================
-end
