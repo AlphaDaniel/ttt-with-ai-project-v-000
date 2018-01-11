@@ -5,7 +5,7 @@ class Game < Dry_Helpers
   attr_accessor :player_1, :player_2, :board
 #=====================================intialize=======================================
   def initialize(p1 = Players::Human.new("X"), p2 = Players::Human.new("O"), board = Board.new)
-    self.player_1 = p1 && self.player_2 = p2 && self.board = board
+    self.player_1 = p1; self.player_2 = p2; self.board = board
   end
 #====================================game_states======================================
 WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4,2]]
