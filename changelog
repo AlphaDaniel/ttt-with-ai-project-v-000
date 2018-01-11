@@ -4,6 +4,7 @@ Version 1.2.0
 - Added Dry_Helpers class to help with some repeating code
 - Added Modes class to store game modes
 - Added play first? option
+- Made AI A Little Faster
 
 Version 1.0.0
 - Added Game Modes 0/1/2
