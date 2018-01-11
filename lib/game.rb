@@ -37,15 +37,9 @@ WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4
       if self.mode == "0"
         self.spectator
       elsif self.mode == "1"
-        self.mode = "valid"
-        puts "YOU vs COMPUTER... GOOD LUCK!".cyan
-        sleep(2)
-        Game.new(Players::Human.new("X"), Players::Computer.new("O")).play
+        self.vs_computer
       elsif self.mode == "2"
-        self.mode = "valid"
-        puts "PLAYER vs PLAYER... MAY THE BEST MAN WIN!".cyan
-        sleep(2.5)
-        Game.new.play
+        self.player_vs_player
       else
         puts "\n Invalid Entry Please Enter 0, 1, or 2 \n".colorize(color: :white, background: :red)
         sleep(0.3)
