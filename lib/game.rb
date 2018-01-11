@@ -12,10 +12,6 @@ class Game
 #=====================================================================================
 WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4,2]]
 #=====================================================================================
-  def won?
-    WIN_COMBINATIONS.find{|c| board.cells[c[0]] == board.cells[c[1]] && board.cells[c[0]] == board.cells[c[2]] && board.cells[c[0]] != " "}
-  end
-
   def win_combo_char
     board.cells[won?[0]]
   end
@@ -23,7 +19,11 @@ WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[6,4
   def current_player
     board.turn_count.even? ? player_1 : player_2
   end
-#=====================================================================================
+#====================================game_states======================================
+  def won?
+    WIN_COMBINATIONS.find{|c| board.cells[c[0]] == board.cells[c[1]] && board.cells[c[0]] == board.cells[c[2]] && board.cells[c[0]] != " "}
+  end
+  
   def draw?
     !won? && board.full?
   end
